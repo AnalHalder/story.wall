@@ -1,16 +1,12 @@
 import React, { useContext, useEffect } from 'react';
 import { BlogContext } from '../contexts/BlogContext';
 import parse from 'html-react-parser'
-
+import Home from './Home'
 function Post() {
-    const { modifyDate,allBlogs, idx, post, setPost} = useContext(BlogContext);
+    const { modifyDate,post} = useContext(BlogContext);
     if (!post || !post.content) {
-        if (allBlogs.length > 0) setPost(allBlogs[idx]);
-        else return (
-            <div
-                className="max-w-3xl mx-auto p-6 bg-white shadow-lg rounded-lg mt-8">
-                Loading...
-            </div>
+        return (
+            <Home/>
         )
     }
 
