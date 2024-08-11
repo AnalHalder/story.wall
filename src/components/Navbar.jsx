@@ -9,7 +9,7 @@ function Navbar() {
         className="text-fuchsia-600 hover:text-fuchsia-800 text-2xl font-bold cursor-pointer" 
         onClick={ ()=> navigate("/") } 
       >
-        story.wall
+        Story.Wall
       </h1>
       <button 
       className=" bg-blue-600 hover:bg-blue-900 text-white p-2 rounded-md text-lg"
