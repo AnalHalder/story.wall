@@ -1,13 +1,12 @@
 import React, { useContext, useEffect } from 'react';
 import { BlogContext } from '../contexts/BlogContext';
 import parse from 'html-react-parser'
-import Home from './Home'
+import { useNavigate } from "react-router-dom";
 function Post() {
     const { modifyDate,post} = useContext(BlogContext);
+    const navigate=useNavigate();
     if (!post || !post.content) {
-        return (
-            <Home/>
-        )
+        return navigate("/");
     }
 
     return (
