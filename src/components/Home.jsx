@@ -24,7 +24,7 @@ function Home() {
                 <h3 className="text-lg font-semibold text-gray-600 mb-1">{blog.Name}</h3>
                 <h2 className="text-sm text-gray-500 mb-2 ">{modifyDate(blog.Date)}</h2>
                 <p className="text-gray-700 border-t">
-                  {parse(blog.content.substring(0, 80))}
+                  {parse(blog.content.substring(0, 80)+". . . . . .")}
                 </p>
               </div>
               <div className=" p-4 border-gray-200">
